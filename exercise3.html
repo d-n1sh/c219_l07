@@ -63,8 +63,14 @@
             $(".btn-add").click(function () {
                 $(".square:first").clone().appendTo(".box");
             });
+
+            $("button").click(function () {
+                var x = $("p").position();
+                alert("Top: " + x.top + " Left: " + x.left);
+            });
         });
     </script>
 </body>
-
+<p>Click the button below to see the position of this paragraph</p>
+<button>Click Me</button>
 </html>

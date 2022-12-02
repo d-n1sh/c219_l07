@@ -19,6 +19,13 @@
             background: dodgerblue;
         }
 
+        .circle2 {
+            width: 90px;
+            aspect-ratio: 1;
+            border-radius: 100%;
+            background: red;
+        }
+
         .square {
             border-radius: 0;
             background: slateblue;
@@ -43,7 +50,9 @@
     <button type="button" class="btn btn-warning btn-lg mb-5" data-bs-toggle="tooltip" title="This is a button">Button</button>
 
     <div class="circle mb-5"></div>
-    
+
+    <div class="circle2 mb-5"></div>
+
     <div class="square mb-2"></div>
     <button type="button" class="btn-sm btn-dark mb-4 btn-add">Add</button>
     <div class="box"></div>
@@ -64,13 +73,12 @@
                 $(".square:first").clone().appendTo(".box");
             });
 
-            $("button").click(function () {
-                var x = $("p").position();
-                alert("Top: " + x.top + " Left: " + x.left);
+            $(".circle2").click(function(){
+                $(this).hide();
             });
+
         });
     </script>
 </body>
-<p>Click the button below to see the position of this paragraph</p>
-<button>Click Me</button>
+
 </html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Bootstrap Hero</title>
+</head>
+
+<style>
+.green {
+  border-style: solid;
+  border-color: green;
+}
+.red {
+  border-style: solid;
+  border-color: red;
+}
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      
+      <a class="navbar-brand" href="#">SOI Learning Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item order-first">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item navbar-collapse">
+            <div class="dropdown">
+              <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">Courses</button>
+              <div class="dropdown-menu bg-black">
+                <a class="dropdown-item text-white" href="#">HTML</a>
+                <a class="dropdown-item text-white" href="#">CSS</a>
+                <a class="dropdown-item text-white" href="#">PHP</a>
+                <a class="dropdown-item text-white" href="#">JavaScript</a>
+                <a class="dropdown-item text-white" href="#">Python</a>
+                <a class="dropdown-item text-white" href="#">Java</a>
+                <a class="dropdown-item text-white" href="#">iOS</a>
+                <a class="dropdown-item text-white" href="#">React</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <form class="d-flex ps-4">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <i class="bi bi-search text-light pt-2" type="submit"></i>
+          </form>
+          <li class="nav-item ps-2 navbar-collapse">
+            <div class="dropdown">
+              <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"><i class="bi bi-bell"></i></button>
+              <div class="dropdown-menu bg-black">
+                <a class="dropdown-item text-white-50" href="#">> Hi, interested in this course?</a>
+                <a class="dropdown-item text-light" href="#">> Sign-up now for free!</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item navbar-collapse">
+            <div>
+              <a class="nav-link" href="#"><i id="myDiv" class="bi bi-person border-success" onclick="myFunction()"></i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+      $(document).ready(function () {
+        // Initialise tooltips
+        $('[data-bs-toggle="tooltip"]').tooltip();
+        // TODO 2: Add toggle function
+        $(".card-title").click(function (){
+          
+        })
+
+        // TODO 3: Clone square and append to grey box
+        $(".btn-add").click(function () {
+            $(".square:first").clone().appendTo(".box");
+        });
+
+        $("#myDiv").click(function () {
+          if ("#myDiv" == true){
+            $(this).toggleClass("green");
+          }
+          else
+          {
+            $(this).toggleClass("red");
+          }
+        })
+
+    });
+
+          function getData(){
+            var title1 = "Added Introduction to HTML and CSS";
+            var title2 = "Added User Experience and Interface Design";
+            var title3 = "Added iOS App Developement using Xcode and Swift";
+            var title4 = "Added Front-end JavaScript Frameworks";
+
+            if ("#1" == true){
+              document.getElementById("display").innerHTML = title1;
+            }
+            if ("#2" == true){
+              document.getElementById("display").innerHTML = title2;
+            }
+            if ("#3"){
+              document.getElementById("display").innerHTML = title3;
+            }
+            if ("#4"){
+              document.getElementById("display").innerHTML = title4;
+            }
+            
+          }
+
+  </script>
+
+  <div class="container-fluid bg-danger">
+    
+    <!-- Add a container here for responsiveness -->
+    <div class="container">
+        <!-- Content here -->
+        <!-- Add a row here that will contain 2 columns -->
+        <div class="row pt-3 ps-lg-5">            
+            <!-- Add a column here for text -->
+            <div class="col-sm-6">
+                <!-- Add a heading element here https://getbootstrap.com/docs/5.1/content/typography -->
+                <h3 class="pt-2 text-white">Welcome to<br> SOI Learning Portal</h3>
+                <!-- Add a paragraph of text here https://getbootstrap.com/docs/5.1/content/typography/#lead -->
+                <p class="lead text-white">
+                Expertly crafted courses that best fit your<br> learning needs and preferences.
+                </p>
+                <!-- Add a button here https://getbootstrap.com/docs/5.1/components/buttons -->
+                <button type="button" class="w-auto btn btn-dark">Browse Courses</button>
+                <button type="button" class="w-auto btn btn-light">Be An Instructor</button>
+            </div>
+            <!-- Add a column here for the image -->
+            <div class="col-sm-3">
+                <img src="images/it.png" class="ps-5 w-100">
+            </div>
+
+        </div>
+    </div>
+  </div>
+
+  <div class="container ps-lg-5 pt-4">
+    <div class="row ps-lg-5">
+      <div class="col order-first ps-lg-5">
+        <div class="col-sm-6">
+            <h6><i class="bi bi-book-fill"></i> 158 online courses</h6>
+            <p>A variety of fresh topics</p>
+        </div> 
+      </div>
+      <div class="col ps-lg-5">
+        <h6><i class="bi bi-person-square"></i> Expert instrcution</h6>
+        <p>Find the right instructor for you</p>
+      </div>
+      <div class="col order-last ps-lg-5">
+        <h6><i class="bi bi-clock-history"></i> Lifetime access</h6>
+        <p>Learn on your schedule</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row row-cols-1 row-cols-md-4 g-4 p-3">
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/html.jpg" class="card-img-top"
+                alt="Introduction to HTML and CSS" />
+              <div class="card-body">
+                <h5 class="card-title" id="title1" value="Introduction to HTML and CSS">Introduction to HTML and CSS</h5>
+                <p class="card-text mt-5">
+                  <i class="bi bi-clock"></i> 2h 30m
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><i class="bi bi-person"></i> Hannah Lim <i class="bi bi-bookmark-fill" id="1" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/ui.webp" class="card-img-top"
+                alt="User Experience and Interface Design" />
+              <div class="card-body">
+                <h5 class="card-title" id="title2" value="User Experience and Interface Design">User Experience and Interface Design</h5>
+                <p class="card-text">
+                  <i class="bi bi-clock"></i> 2h 45m
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><i class="bi bi-person"></i> Julia Lee <i class="bi bi-bookmark-fill" id="2" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/ios.png" class="card-img-top"
+                alt="iOS App Developement using Xcode and Swift" />
+              <div class="card-body">
+                <h5 class="card-title" id="title3" value="iOS App Developement using Xcode and Swift">iOS App Developement using Xcode and Swift</h5>
+                <p class="card-text  mt-4">
+                  <i class="bi bi-clock"></i> 4h 30m
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><i class="bi bi-person"></i> Ryan Low <i class="bi bi-bookmark-fill" id="3" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/html.jpg" class="card-img-top"
+                alt="Introduction to HTML and CSS" />
+              <div class="card-body">
+                <h5 class="card-title" id="title4" value="Front-end JavaScript Frameworks">Front-end JavaScript Frameworks</h5>
+                <p class="card-text mt-5">
+                  <i class="bi bi-clock"></i> 3h 45m
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><i class="bi bi-person"></i> Azhar Kamar <i class="bi bi-bookmark-fill" id="4" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row row-cols-1 row-cols-md-4 g-4 p-3">
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/html.jpg" class="card-img-top"
+                alt="Introduction to HTML and CSS" />
+              <div class="card-body">
+                <h5 class="card-title" id="title1" value="Introduction to HTML and CSS">Introduction to HTML and CSS</h5>
+                <p class="card-text mt-5">
+                  <i class="bi bi-clock"></i> 2h 30m
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><i class="bi bi-person"></i> Hannah Lim <i class="bi bi-bookmark-fill" id="1" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/ui.webp" class="card-img-top"
+                alt="User Experience and Interface Design" />
+              <div class="card-body">
+                <h5 class="card-title" id="title2" value="User Experience and Interface Design">User Experience and Interface Design</h5>
+                <p class="card-text">
+                  <i class="bi bi-clock"></i> 2h 45m
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><i class="bi bi-person"></i> Julia Lee <i class="bi bi-bookmark-fill" id="2" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/ios.png" class="card-img-top"
+                alt="iOS App Developement using Xcode and Swift" />
+              <div class="card-body">
+                <h5 class="card-title" id="title3" value="iOS App Developement using Xcode and Swift">iOS App Developement using Xcode and Swift</h5>
+                <p class="card-text  mt-4">
+                  <i class="bi bi-clock"></i> 4h 30m
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><i class="bi bi-person"></i> Ryan Low <i class="bi bi-bookmark-fill" id="3" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/html.jpg" class="card-img-top"
+                alt="Introduction to HTML and CSS" />
+              <div class="card-body">
+                <h5 class="card-title" id="title4" value="Front-end JavaScript Frameworks">Front-end JavaScript Frameworks</h5>
+                <p class="card-text mt-5">
+                  <i class="bi bi-clock"></i> 3h 45m
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><i class="bi bi-person"></i> Azhar Kamar <i class="bi bi-bookmark-fill" id="4" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- <div class="container-fluid bg-danger pt-5">
+
+    <h3 class="ps-3">Featured Courses</h3>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4 p-3">
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/html.jpg" class="card-img-top"
+            alt="Introduction to HTML and CSS" />
+          <div class="card-body">
+            <h5 class="card-title" id="title1" value="Introduction to HTML and CSS">Introduction to HTML and CSS</h5>
+            <p class="card-text mt-5">
+              <i class="bi bi-clock"></i> 2h 30m
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><i class="bi bi-person"></i> Hannah Lim <i class="bi bi-bookmark-fill" id="1" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/ui.webp" class="card-img-top"
+            alt="User Experience and Interface Design" />
+          <div class="card-body">
+            <h5 class="card-title" id="title2" value="User Experience and Interface Design">User Experience and Interface Design</h5>
+            <p class="card-text">
+              <i class="bi bi-clock"></i> 2h 45m
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><i class="bi bi-person"></i> Julia Lee <i class="bi bi-bookmark-fill" id="2" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/ios.png" class="card-img-top"
+            alt="iOS App Developement using Xcode and Swift" />
+          <div class="card-body">
+            <h5 class="card-title" id="title3" value="iOS App Developement using Xcode and Swift">iOS App Developement using Xcode and Swift</h5>
+            <p class="card-text  mt-4">
+              <i class="bi bi-clock"></i> 4h 30m
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><i class="bi bi-person"></i> Ryan Low <i class="bi bi-bookmark-fill" id="3" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/html.jpg" class="card-img-top"
+            alt="Introduction to HTML and CSS" />
+          <div class="card-body">
+            <h5 class="card-title" id="title4" value="Front-end JavaScript Frameworks">Front-end JavaScript Frameworks</h5>
+            <p class="card-text mt-5">
+              <i class="bi bi-clock"></i> 3h 45m
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><i class="bi bi-person"></i> Azhar Kamar <i class="bi bi-bookmark-fill" id="4" data-bs-target="#bookmark" type="button" onclick="getData()" data-bs-toggle="offcanvas" title="Add to Bookmarks"></i></small>
+          </div>
+        </div>
+      </div>
+      <footer>
+        © 2021 SOI Learning Portal. All Rights Reserved.
+        Privacy
+        Terms
+        Feedback
+        Support
+        </footer>
+    </div> -->
+
+    <footer>
+      © 2021 SOI Learning Portal. All Rights Reserved. <br>
+      Privacy <br>
+      Terms <br>
+      Feedback <br>
+      Support <br>
+    </footer>
+
+    <div class="offcanvas offcanvas-bottom" id="bookmark">
+      <div class="offcanvas-body" id="display">
+        
+      </div>
+    </div>
+
+</body>
+</html>
